@@ -12,5 +12,12 @@ nav.navbar {
   padding-right:60px;
 }
 div.bg-image {
-    margin-top: 25px;
+    width: 100%;
+    max-width: 1366px;
+}
+img#pcdcar{
+	width: 826px;
+	height: 368px;
+	margin-left: 270px;
+	margin-top: 25px;
 }
