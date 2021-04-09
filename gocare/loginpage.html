@@ -75,118 +75,74 @@
             <div class="bg-image" style="background-image: url('https://github.com/Vic-Tec/FPG.ADS.ProjLES.2021.1/blob/main/gocare/img/Banner1.jpg?raw=true');
                   height: 100%;" alt="Banner principal">
         <!-- Centro !-->
-            <h2 style="text-align: center;padding-top: 20%">Antes de se cadastrar, selecione:</h2>
+            <h2 style="text-align: center;padding-top: 20%">Antes de entrar, selecione:</h2>
           <center style="margin-top: 5%" >
 
-        <!-- Modal MOTORISTA -->
-            <button id="btnmotorista" type="button" class="btn btn-primary btn-lg" style="margin-right: 5%; padding: 32px 16px" data-toggle="modal" data-target=".bd-motorista-modal-lg">→ Sou motorista</button>
+        <!-- Modal Login MOTORISTA -->
+            <button id="btnloginmotorista" type="button" class="btn btn-primary btn-lg" style="margin-right: 5%; padding: 32px 16px" data-toggle="modal" data-target=".bd-loginmotorista-modal-lg">→ Motorista</button>
 
-            <div class="modal fade bd-motorista-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal fade bd-loginmotorista-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-lg">
                 <div class="modal-content">
 
                   <div>
                     <img src="img/favicon2.ico" style="width: 12%; margin-top: 1%">
-                    <h2 style="padding-bottom: 1%">Venha ser nosso motorista!</h2>
                   </div>
                   <form style="margin: 2%">
                     <div class="form-row">
                       <div class="form-group col-md-6">
-                        <label for="inputNome">Nome</label>
-                        <input type="text" class="form-control" id="inputNome" placeholder="Nome">
+                        <label for="inputEmailMotorista">Email</label>
+                        <input type="email" class="form-control" id="inputEmailMotorista" placeholder="Email">
                       </div>
                       <div class="form-group col-md-6">
-                        <label for="inputSobrenome">Sobrenome</label>
-                        <input type="text" class="form-control" id="inputSobrenome" placeholder="Sobrenome">
-                      </div>
-                      <div class="form-group col-md-6">
-                        <label for="inputEmail">Email</label>
-                        <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-                      </div>
-                      <div class="form-group col-md-6">
-                        <label for="inputSenha">Senha</label>
-                        <input type="password" class="form-control" id="inputSenha" placeholder="Senha">
-                        <small id="passwordHelpBlock" class="form-text text-muted">
-                          Sua senha deve conter entre 8-20 caracteres, contendo apenas letras e números.
-                        </small>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label for="inputEndereco">Endereço</label>
-                      <input type="text" class="form-control" id="inputEndereco" placeholder="Rua das Alabaredas, 1540">
-                    </div>
-                    <div class="form-row">
-                      <div class="form-group col-md-6">
-                        <label for="inputCidade">Cidade</label>
-                        <input type="text" class="form-control" id="inputCidade">
-                      </div>
-                      <div class="form-group col-md-3">
-                        <label for="inputCelular">Celular</label>
-                        <input type="text" class="form-control" id="inputCelular" placeholder="Ex: (xx)9xxxx-xxxx">
+                        <label for="inputSenhaMotorista">Senha</label>
+                        <input type="password" class="form-control" id="inputSenhaMotorista" placeholder="Senha">
                       </div>
                     </div>
                     <div class="form-group">
                       <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="gridCheck">
                         <label class="form-check-label" for="gridCheck">
-                          Eu li e ACEITO os
-                          <a href="#" class="link" style="color: #007bff;">termos de uso</a>
+                          Lembrar de mim.
                         </label>
                       </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    <button type="submit" class="btn btn-primary">Entrar</button>
                   </form>
 
                 </div>
               </div>
             </div>
-        <!-- Modal PASSAGEIRO!-->
-            <button id="btnpassageiro" type="button" class="btn btn-primary btn-lg" style="margin-left: 5%; padding: 32px 16px" data-toggle="modal" data-target=".bd-passageiro-modal-lg">→ Sou passageiro</button>
+        <!-- Modal Login PASSAGEIRO!-->
+            <button id="btnloginpassageiro" type="button" class="btn btn-primary btn-lg" style="margin-left: 5%; padding: 32px 16px" data-toggle="modal" data-target=".bd-loginpassageiro-modal-lg">→ Sou passageiro</button>
 
-            <div class="modal fade bd-passageiro-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal fade bd-loginpassageiro-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                   
                   <div>
                     <img src="img/favicon2.ico" style="width: 12%; margin-top: 1%">
-                    <h2 style="padding-bottom: 1%">Venha viajar com a gente!</h2>
                   </div>
                   <form style="margin: 2%">
                     <div class="form-row">
                       <div class="form-group col-md-6">
-                        <label for="inputNome2">Nome</label>
-                        <input type="text" class="form-control" id="inputNome2" placeholder="Nome">
+                        <label for="inputEmailPassageiro">Email</label>
+                        <input type="email" class="form-control" id="inputEmailPassageiro" placeholder="Email">
                       </div>
                       <div class="form-group col-md-6">
-                        <label for="inputSobrenome2">Sobrenome</label>
-                        <input type="text" class="form-control" id="inputSobrenome2" placeholder="Sobrenome">
-                      </div>
-                      <div class="form-group col-md-6">
-                        <label for="inputEmail2">Email</label>
-                        <input type="email" class="form-control" id="inputEmail2" placeholder="Email">
-                      </div>
-                      <div class="form-group col-md-6">
-                        <label for="inputSenha2">Senha</label>
-                        <input type="password" class="form-control" id="inputSenha2" placeholder="Senha">
-                        <small id="passwordHelpBlock" class="form-text text-muted">
-                          Sua senha deve conter entre 8-20 caracteres, contendo apenas letras e números.
-                        </small>
+                        <label for="inputSenhaPassageiro">Senha</label>
+                        <input type="password" class="form-control" id="inputSenhaPassageiro" placeholder="Senha">
                       </div>
                     </div>
-                      <div class="form-group col-md-3">
-                        <label for="inputCelular2">Celular</label>
-                        <input type="text" class="form-control" id="inputCelular2" placeholder="Ex: (xx)9xxxx-xxxx">
-                      </div>
                     <div class="form-group">
                       <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="gridCheck">
                         <label class="form-check-label" for="gridCheck">
-                          Eu li e ACEITO os
-                          <a href="#" class="link" style="color: #007bff;">termos de uso</a>
+                          Lembrar de mim.
                         </label>
                       </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    <button type="submit" class="btn btn-primary">Entrar</button>
                   </form>
 
                 </div>
