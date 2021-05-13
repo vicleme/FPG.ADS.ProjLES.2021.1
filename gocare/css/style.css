@@ -1,0 +1,157 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+
+
+/* 
+    Created on : 07 de mar de 2021, 12:45:22
+    Author     : Victor
+*/
+
+nav.navbar {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+div.bg-image {
+    width: 100%;
+    max-width: 1366px;
+}
+
+img#pcdcar {
+    width: 826px;
+    height: 368px;
+    margin-left: 270px;
+    margin-top: 25px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.column {
+    float: left;
+    margin-bottom: 16px;
+    padding: 0 60px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+}
+
+.container {
+    padding: 0 16px;
+}
+
+.container::after,
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+footer#navmap {
+    width: max-content;
+    margin: auto;
+}
+
+@media screen and (max-width: 1300px) {
+    #navmap {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .column {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .column {
+        width: 100%;
+        text-align: center;
+    }
+    #navmap {
+        margin: auto;
+    }
+    button.downloadapp {
+        text-align: center;
+        margin: auto;
+    }
+}
+
+.buttonhome {
+    transition-duration: 0.4s;
+}
+
+.buttonhome:hover {
+    background-color: #1e47a8;
+    /* Green */
+    color: white;
+}
+
+section#presentation1 {
+    width: 100vw;
+    height: 49.6875vw;
+    position: relative;
+    left: 0;
+    top: 0;
+    background-image: url("https://i.ibb.co/Z2X29DS/bgpresentation1.png");
+    background-size: 100vw;
+}
+
+section#presentation2 {
+    width: 100vw;
+    height: 6.5625vw;
+    position: relative;
+    left: 0;
+    top: 0;
+    background-image: url("https://i.ibb.co/7jSj5Kh/bgpresentation2.png");
+    background-size: 100vw;
+}
+
+section#download {
+    width: 100vw;
+    height: 49.609375vw;
+    position: relative;
+    background-image: url("https://i.ibb.co/7p8ZwTB/bgdownload.png");
+    background-size: 100vw;
+}
+
+section#partners {
+    width: 100vw;
+    position: relative;
+    background-image: url("https://i.ibb.co/HHHQsMX/bgpartners.png");
+    background-size: 100vw;
+    background-color: rgb(26, 57, 129);
+    background-repeat: no-repeat;
+}
+
+footer a:hover {
+    color: aquamarine
+}
+
+img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
+    display: none;
+}
