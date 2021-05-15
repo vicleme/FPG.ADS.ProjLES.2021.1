@@ -1,15 +1,17 @@
 <?php
 
     session_start(); 
-    $login = $_SESSION[''];
-       if (!empty( $_SESSION['motorista'])){
-             echo "Usu&aacute;rio Logado :" . $login;
-       }      
-       else{
-            echo "Usuario n&atilde;o logado";
-            header("Location: loginmotorista.php");   
-      }
-      unset($_SESSION['login']);
+    if ( (!empty($_SESSION['motorista'])) || (!empty($_SESSION['passageiro'])) ){
+        if (!empty($_SESSION['motorista'])) {
+            $login = $_SESSION['motorista'];
+        } else {
+            $login = $_SESSION['passageiro'];
+        }
+    } else {
+        header("Location: acesso.php?msg=5");   
+    }
+
+    unset($_SESSION['login']);
 ?>
 
 <!DOCTYPE html>
@@ -33,148 +35,20 @@
 <body style="background-color:rgb(87, 154, 210)">
 
     <!-- Barra de navegação vertical -->
-    <div class="vertical-nav" id="sidebar" style="background-color: rgb(26, 57, 129);">
-        <div class="py-4 px-3 mb-4" style="background-color: rgb(30, 44, 78);">
-            <div class="media d-flex align-items-center"><img src="img/motorista.png" alt="..." width="65" class="mr-3 rounded-circle img-thumbnail shadow-sm">
-                <div class="media-body">
-                    <h3 class="m-0" style="color:white">Roberto</h3>
-                    <p class="font-weight-light mb-0" style="color: rgb(153, 192, 192);">Motorista</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Conta -->
-        <p class="font-weight-bold text-uppercase px-3 small pb-4 mb-0" style="color: rgb(175, 245, 245);">Conta</p>
-        <ul class="nav flex-column mb-0" style="color: white">
-            <li class="nav-item">
-                <a href="#" class="nav-link" style=" color: white; background-color: rgb(87, 154, 210);">
-                    <i class='fas fa-address-card' style='margin-right:15px'></i>Editar perfil
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link" onMouseOver="rgb(87, 154, 210)" style="color: white;">
-                    <i class='fas fa-key' style='margin-right:15px;'></i>Alterar senha
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link" style="color: white;">
-                    <i class='fas fa-bell' style='margin-right:15px'></i>Notificações
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link" style="color: white;">
-                    <i class='fas fa-user-clock' style='margin-right:15px'></i>Atividade da conta
-                </a>
-            </li>
-        </ul>
-        <br>
-
-        <!-- Rede -->
-        <p class="font-weight-bold text-uppercase px-3 small pb-4 mb-0" style="color: rgb(175, 245, 245);">Rede</p>
-        <ul class="nav flex-column mb-0" style="color: white">
-            <li class="nav-item">
-                <a href="#" class="nav-link" style="color: white;">
-                    <i class='fas fa-car' style='margin-right:15px'></i>Corridas
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link" style="color: white;">
-                    <i class='fas fa-user-circle' style='margin-right:15px'></i>Contatos
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link" style="color: white;">
-                    <i class='fas fa-sms' style='margin-right:15px'></i>Conversas
-                </a>
-            </li>
-        </ul>
-    </div>
+    <?php
+        include 'verticalnavbar.php';
+    ?>
 
     <!-- Conteúdo da página -->
     <div class="page-content" id="content">
+
         <header>
 
             <!-- Barra de Navegação -->
-            <section id="navbar">
-                <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#1e47a8">
+            <?php
+            include 'navbar.php';
+            ?>
 
-                    <!-- Marca -->
-                    <a class="navbar-brand" href="index.html">
-                        <img src="img/brand-navbar.png" alt="Logotipo da GoCare">
-                    </a>
-
-                    <!-- Menu hambúrguer da barra de navegação horizontal -->
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <!-- Guias -->
-                    <div class="collapse navbar-collapse" id="navbarNav">
-
-                        <!-- Informação -->
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="">Sobre</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="">Motoristas</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="">Passageiros</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="">Peça sua viagem</a>
-                            </li>
-                        </ul>
-
-                        <!-- Acesso -->
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-
-                                <!-- Entrar -->
-                                <form action="acesso.html" class="form-inline my-2 my-lg-0">
-                                    <div style="padding-right:7px">
-                                        <button type="submit" class="btn btn-info btn-block">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21"
-                                            fill="currentColor" class="bi bi-person-square" viewBox="0 0 16 16">
-                                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-                                            <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12z" />
-                                        </svg>
-                                        &nbspEntrar
-                                        </button>
-                                    </div>
-                                </form>
-
-                            </li>
-
-                            <!-- Cadastrar-se -->
-                            <li class="nav-item">
-                                <a href="acesso.html?js:openOptionCadastrar()" class="form-inline my-2 my-lg-0" style="text-decoration: none;">
-                                    <div style="padding-right:7px">
-                                        <button type="submit" class="btn btn-info btn-block" style="height: 37px" ;>
-                                        Cadastrar-se
-                                    </button>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-
-                        <!-- Ajuda -->
-                        <ul class="navbar-nav">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Ajuda
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="">Dúvidas</a>
-                                    <a class="dropdown-item" href="">Contato</a>
-                                </div>
-                            </li>
-                        </ul>
-
-                    </div>
-                </nav>
-            </section>
         </header>
 
         <!-- Contâiner de conteúdo -->
@@ -225,65 +99,10 @@
         </div>
 
         <footer style="background-color:#1e47a8;">
-            <!-- Mapa de navegação -->
-            <section id="navmap" class="clearfix"><br>
-
-                <!-- Download -->
-                <div class="column">
-                    <img src="img/qrcode.png" width="135px" alt="QRCode para o download do aplicativo">
-                    <br><br>
-                    <button style="width: 135px;" class="btn btn-info btn-block downloadapp"><i style="font-size: 20px;"
-                  class="fab fa-apple"> &nbsp;</i>Apple
-              Store</button>
-                    <button style="width: 135px;" class="btn btn-info btn-block downloadapp"><i class="fab fa-google-play">
-                  &nbsp;</i>Play Store</button>
-                </div>
-
-                <!-- Institucional -->
-                <div class="column" style="color:white">
-                    <p>GoCare Tecnologia Ltda<br> Praia Grande/SP<br>CEP: 11700-100<br> CNPJ: 00.000.000/0000-00</p>
-                    <div id="Redes Sociais">
-                        <i class='fab fa-facebook' style='font-size:24px'></i>&nbsp
-                        <i class='fab fa-twitter' style='font-size:24px'></i>&nbsp
-                        <i class='fab fa-linkedin' style='font-size:24px'></i>&nbsp
-                        <i class='fab fa-youtube' style='font-size:24px'></i>&nbsp
-                        <i class='fab fa-instagram' style='font-size:24px'></i>
-                    </div>
-                </div>
-
-                <!-- Informação  -->
-                <div style="color:white;" class="column">
-                    <a href="index.html">Início</a><br>
-                    <a href="">Sobre </a><br>
-                    <a href="">Motoristas </a> <br>
-                    <a href="">Passageiros </a> <br>
-                    <a href="">Peça sua viagem</a> <br>
-                </div>
-
-                <!-- Ajuda -->
-                <div style="color:white" class="column">
-                    <a href="">Dúvidas </a><br>
-                    <a href="">Contato </a><br>
-                </div>
-
-                <!-- Acesso -->
-                <div style="color:white;" class="column">
-                    <a href="index.html">Entrar</a><br>
-                    <a href="index.html">Cadastrar-se</a><br>
-                </div>
-
-            </section>
-
-            <!-- Autoria -->
-            <section id="author" style="background-color: #10265A;">
-                <div style="color:white;padding-top: 15px;text-align: center;">
-                    Desenvolvido na disciplina de LES -
-                    <small>Prof. Salgado</small>
-                </div>
-                <div style="padding-bottom:15px;color:white;text-align: center;">
-                    <small>Milena Audrey, Sávio Gois, Victor Leme e Vinícius Almeida<br></small>
-                </div>
-            </section>
+            
+            <?php
+            include 'footer.php';
+            ?>
 
         </footer>
     </div>

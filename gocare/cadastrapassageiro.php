@@ -15,20 +15,18 @@ if(!empty($_POST))
 
 	$sql = "INSERT INTO passageiro(nome, sobrenome, genero, datanasc, email, telcel, senha) 
 	VALUES ('${nome}', '${sobrenome}', '${genero}', '${datanasc}', '${email}', '${telcel}', '${senha}')";
-  	
-   //echo $sql;
 
-   $query = $db->query($sql);
- 
+	$query = $db->query($sql);
+	
 	if ($query){
 		mysqli_close($db);
-		header("Location: acesso.html");exit;
-	//    echo "<br>Cadastrado com sucesso!";
+		header("Location: acesso.php?msg=4");
+		exit;
 	}
 	else {
 		mysqli_close($db);
-		header("Location: logindin.php?msg=2&femail=$email");
-	//    echo "<br>Houve um erro no cadastro.";
+		header("Location: acesso.php?msg=3&femail=$email");
+		exit;
 	}
 
 }

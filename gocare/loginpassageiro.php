@@ -7,7 +7,7 @@ $email = $_POST['fusuario'];
 $senha = $_POST['fsenha'];
 $senha = md5($senha);
                                   
-$sql = "SELECT email, senha FROM motorista WHERE email = '${email}' AND senha = '${senha}';";
+$sql = "SELECT email, senha FROM passageiro WHERE email = '${email}' AND senha = '${senha}';";
 
 $sqlv = "SELECT email FROM motorista WHERE email = '${email}';";
 
@@ -20,10 +20,10 @@ foreach($db->query($sql)as $row)
 if ($row>0){
 	$_SESSION['motorista'] = $row['email'];
         mysqli_close($db);       
-        header("Location: perfilmotorista.php");
+        header("Location: perfilpassageiro.php");
         //echo "<script>location.href='perfilmotorista.html';</script>";
         exit;
-} 
+}
 
 foreach($db->query($sqlv)as $rowv)
 

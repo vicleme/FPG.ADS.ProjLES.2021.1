@@ -16,22 +16,18 @@ if(!empty($_POST))
 	
 	$sql = "INSERT INTO motorista (nome, sobrenome, genero, datanasc, email, senha, telcel, cidade) 
 	VALUES ('${nome}', '${sobrenome}', '${genero}', '${datanasc}', '${email}', '${senha}', '${telcel}', '${cidade}')";
-  	
-	// echo $sql;
 
    $query = $db->query($sql);
  
 	if ($query){
 		mysqli_close($db);
-		header("Location: acesso.html");
+		header("Location: acesso.php?msg=4");
 		exit;
-		// echo "<br>Cadastrado com sucesso!";
 	}
 	else {
 		mysqli_close($db);
-		header("Location: logindin.php?msg=2&femail=$email");
+		header("Location: acesso.php?msg=3&femail=$email");
 		exit;
-	    // echo "<br>Houve um erro no cadastro.";
 	}
 
 }
