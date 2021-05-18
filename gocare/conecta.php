@@ -5,6 +5,7 @@ if (!$db) {
  echo "Error: " . mysqli_connect_error();
  exit();
 }
+
   mysqli_set_charset($db,"utf8");
 
 ?>

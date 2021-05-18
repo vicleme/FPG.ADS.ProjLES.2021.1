@@ -41,8 +41,8 @@
 
             <!-- Acesso -->
             <div style="color:white;" class="column">
-                <a href="index.html">Entrar</a><br>
-                <a href="index.html">Cadastrar-se</a><br>
+                <a href="acesso.php">Entrar</a><br>
+                <a href="acesso.php">Cadastrar-se</a><br>
             </div>
 
         </section>

@@ -4,11 +4,11 @@
     if ( (!empty($_SESSION['motorista'])) || (!empty($_SESSION['passageiro'])) ){
         if (!empty($_SESSION['motorista'])) {
             $login = $_SESSION['motorista'];
-            header("Location: perfilmotorista.php?msg=5");
+            header("Location: perfilmotorista.php");
             exit;
         } else {
             $login = $_SESSION['passageiro'];
-            header("Location: perfilpassageiro.php?msg=5");
+            header("Location: perfilpassageiro.php");
             exit;
         }
     }
@@ -211,7 +211,7 @@ if ($_GET['msg']=='1'){
                             <div class="form-group col-md-6">
                                 <p>Telefone/celular: </p>
                                 <label for="telcel" class="sr-only">Telefone/celular</label>
-                                <input class="form-control" type="tel" id="telcel" name="ftelcel" maxlength=20 required>
+                                <input class="form-control telcel" type="tel" id="telcel" name="ftelcel" maxlength=20 pattern="\([0-9]{2}\)[\s][0-9]{4,5}-[0-9]{4}" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <p>Cidade: </p>
@@ -299,7 +299,7 @@ if ($_GET['msg']=='1'){
                             <div class="form-group col-md-6" style="margin-left: auto;margin-right: auto;">
                                 <p>Telefone/celular: </p>
                                 <label for="telcel" class="sr-only">Telefone/celular</label>
-                                <input class="form-control" type="tel" id="telcel" name="ftelcel" maxlength=20 required>
+                                <input class="form-control telcel" type="tel" id="telcel" name="ftelcel" maxlength=20 pattern="\([0-9]{2}\)[\s][0-9]{4,5}-[0-9]{4}" required>
                             </div>
                         </div>
                         <div class="form-group">
@@ -312,7 +312,7 @@ if ($_GET['msg']=='1'){
                         </div>
 
                         <button type="submit" class="btn btn-primary btn-block ">
-                             Cadastrar
+                            Cadastrar
                         </button>
                     </form>
                 </div>
@@ -481,6 +481,27 @@ if ($_GET['msg']=='1'){
         window.addEventListener("load", function() {
             buscaEndereco();
         });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+    <script>
+
+        jQuery(".telcel")
+            .mask("(99) 9999-9999?9")
+            .focusout(function (event) {  
+                var target, phone, element;  
+                target = (event.currentTarget) ? event.currentTarget : event.srcElement;  
+                phone = target.value.replace(/\D/g, '');
+                element = $(target);  
+                element.unmask();  
+                if(phone.length > 10) {  
+                    element.mask("(99) 99999-999?9");  
+                } else {  
+                    element.mask("(99) 9999-9999?9");  
+                }  
+            });
+
     </script>
 
 </body>

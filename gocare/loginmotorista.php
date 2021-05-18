@@ -1,4 +1,11 @@
 <?php
+
+/* Informa o nível dos erros que serão exibidos */
+error_reporting(E_ALL);
+ 
+/* Habilita a exibição de erros */
+ini_set("display_errors", 1);
+
 session_start(); 
 include_once("conecta.php");
 
@@ -19,7 +26,8 @@ foreach($db->query($sql)as $row)
 
 if ($row>0){
 	$_SESSION['motorista'] = $row['email'];
-        mysqli_close($db);       
+        include_once("reativacontamotorista.php");  
+        mysqli_close($db);
         header("Location: perfilmotorista.php");
         //echo "<script>location.href='perfilmotorista.html';</script>";
         exit;
