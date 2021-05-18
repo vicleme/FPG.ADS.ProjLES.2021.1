@@ -13,11 +13,13 @@
     }
 
     unset($_SESSION['login']);
+    
 ?>
 
 <?php
-
-include("selecionamotorista.php");
+if ($_GET['msg']=='2'){
+    $msg="Houve algum erro. Tente novamente mais tarde.";
+}
 
 ?>
 
@@ -36,7 +38,7 @@ include("selecionamotorista.php");
     <link href="css/vertical-navbar.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="shortcut icon" href="img/favicon.ico">
-    <title>GoCare - Área do Usuário</title>
+    <title>GoCare - Desativar conta</title>
 </head>
 
 <body style="background-color:rgb(87, 154, 210)">
@@ -63,48 +65,33 @@ include("selecionamotorista.php");
             <!-- Menu hambúrguer da barra de navegação vertical -->
             <button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4 "><i class="fa fa-bars mr-2"></i></button>
 
-            <!-- Cartão de perfil -->
+            <!-- Cartão de troca de senha -->
             <div class="card" style="width: 70%;margin: auto;">
                 <div class="card-body">
 
-                    <div class="row">
-                        <div class="col-md-auto" style="margin: auto;">
-                            <h2 class="card-title"><?php echo $campo['nome'];?> <?php echo $campo['sobrenome'];?></h2>
-                            <p>
-                            <b>Nome de usuário:</b> <?php echo $campo['nomeu'];?>
-                            </p>
-                            <img src="uimg/<?php echo $campo['fotoperfil']?>" style="max-width: 200px;width: 80%;background-color: #cacfcd;">
-                            <p style="padding-top: 10px;">
-                                <i class="fa fa-star"></i> Avaliação: <?php echo $campo['avaliacao'];?><br>
-                                <i class="fas fa-car" ></i> Corridas: <?php echo $campo['corridas'];?><br>
-                                <i class="fas fa-user-clock" style="margin-bottom:12px"></i> Na plataforma desde: <?php echo $campo['tempoplat'];?><br>
-                            </p>
+                    <div>
+
+                    <?php
+
+                        if ($_GET['msg']=='2'){
+                            echo "<h2>Conta desativada</h2>";
+                            echo "<p style='color:red;text-align:center'>".$msg."</p>";
+                        } else {
+
+                    ?>
+
+                        <h2>Desativar conta</h2>
+                        <p style='color:blue;text-align:center'>Conta desativada com sucesso!</p>
+                        <div style="width: fit-content;margin-left: auto;text-align: center;margin-top:16px;">
+                        <a href="reativacontamotorista.php" class="card-link"><i class="fas fa-undo"></i> Reativar conta</a><br>
+                        <?php echo '<a class="card-link" href="logout.php?token='.md5(session_id()).' "><i class="fas fa-door-open"></i> Sair</a>'; ?>
                         </div>
 
-                        <div class="col-md-auto" style="margin: auto;">
-                            <div style="margin-bottom: 25px;">
-                                <p><b>E-mail:</b> <?php echo $campo['email'];?></p>
-                                <p><b>Telefone:</b> <?php echo $campo['telcel'];?></p>
-                                <p><b>Gênero:</b> <?php echo $campo['generoe'];?></p>
-                            </div>
-                            <div>
-                                <p>
-                                    <i class="fas fa-globe"></i> <b>Idioma:</b> <?php echo $campo['idioma'];?><br>
-                                    <i class="fas fa-map-marker-alt"></i> <b>Cidade:</b> <?php echo $campo['cidade'];?>
-                                </p>
-                            </div>
-                        </div>
+                    <?php } ?>
 
                     </div>
-
-                    <div style="width: fit-content;margin-left: auto;text-align: center">
-                        <a href="perfilmotoristaedita.php" class="card-link"><i class="fas fa-pencil-alt"></i> Editar dados</a><br>
-                        <a href="perfilmotoristadesativar.php" class="card-link"><i class="fas fa fa-close"></i>  Desativar conta</a>
-                    </div>
-
                 </div>
             </div>
-
         </div>
 
         <footer style="background-color:#1e47a8;">
@@ -129,10 +116,21 @@ include("selecionamotorista.php");
     </script>
 
     <script>
-        
-        // Get the container element
-        var aba = document.getElementById("abaeditarperfil");
-        aba.className+= " ativo";
+
+    jQuery(".telcel")
+        .mask("(99) 9999-9999?9")
+        .focusout(function (event) {  
+            var target, phone, element;  
+            target = (event.currentTarget) ? event.currentTarget : event.srcElement;  
+            phone = target.value.replace(/\D/g, '');
+            element = $(target);  
+            element.unmask();  
+            if(phone.length > 10) {  
+                element.mask("(99) 99999-999?9");  
+            } else {  
+                element.mask("(99) 9999-9999?9");  
+            }  
+        });
 
     </script>
 

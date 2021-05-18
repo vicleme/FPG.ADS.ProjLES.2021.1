@@ -4,9 +4,9 @@
     if ( (!empty($_SESSION['motorista'])) || (!empty($_SESSION['passageiro'])) ){
         if (!empty($_SESSION['motorista'])) {
             $login = $_SESSION['motorista'];
+            header("Location: perfilpassageiro.php"); 
         } else {
             $login = $_SESSION['passageiro'];
-            header("Location: perfilpassageiro.php?"); 
         }
     } else {
         header("Location: acesso.php?msg=5");   
@@ -17,7 +17,7 @@
 
 <?php
 
-include("selecionamotorista.php");
+include("selecionapassageiro.php");
 
 ?>
 
@@ -90,7 +90,6 @@ include("selecionamotorista.php");
                             <div>
                                 <p>
                                     <i class="fas fa-globe"></i> <b>Idioma:</b> <?php echo $campo['idioma'];?><br>
-                                    <i class="fas fa-map-marker-alt"></i> <b>Cidade:</b> <?php echo $campo['cidade'];?>
                                 </p>
                             </div>
                         </div>
@@ -98,8 +97,8 @@ include("selecionamotorista.php");
                     </div>
 
                     <div style="width: fit-content;margin-left: auto;text-align: center">
-                        <a href="perfilmotoristaedita.php" class="card-link"><i class="fas fa-pencil-alt"></i> Editar dados</a><br>
-                        <a href="perfilmotoristadesativar.php" class="card-link"><i class="fas fa fa-close"></i>  Desativar conta</a>
+                        <a href="perfilpassageiroedita.php" class="card-link"><i class="fas fa-pencil-alt"></i> Editar dados</a><br>
+                        <a href="perfilpassageirodesativar.php" class="card-link"><i class="fas fa fa-close"></i>  Desativar conta</a>
                     </div>
 
                 </div>
