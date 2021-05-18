@@ -66,6 +66,7 @@ body {
     overflow-x: hidden;
 }
 
+.ativo,
 div.vertical-nav .nav-link:hover {
     background-color: rgb(87, 154, 210);
 }

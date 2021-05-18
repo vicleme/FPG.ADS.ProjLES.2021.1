@@ -135,14 +135,15 @@ section#download {
     width: 100vw;
     height: 49.609375vw;
     position: relative;
-    background-image: url("https://i.ibb.co/7p8ZwTB/bgdownload.png");
+    /* background-image: url("https://i.ibb.co/7p8ZwTB/bgdownload.png"); */
+    background-color: rgb(128, 222, 244);
     background-size: 100vw;
 }
 
 section#partners {
     width: 100vw;
     position: relative;
-    background-image: url("https://i.ibb.co/HHHQsMX/bgpartners.png");
+    /* background-image: url("https://i.ibb.co/HHHQsMX/bgpartners.png"); */
     background-size: 100vw;
     background-color: rgb(26, 57, 129);
     background-repeat: no-repeat;
