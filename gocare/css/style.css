@@ -146,7 +146,7 @@ section#partners {
     /* background-image: url("https://i.ibb.co/HHHQsMX/bgpartners.png"); */
     background-size: 100vw;
     background-color: rgb(26, 57, 129);
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
 }
 
 footer a:hover {
