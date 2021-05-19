@@ -4,7 +4,7 @@
         $login = $_SESSION['motorista'];}
     if ( (!empty($_SESSION['passageiro'])) ){
         $login = $_SESSION['passageiro'];}
-      unset($_SESSION['login']);
+    unset($_SESSION['login']);
 ?>
 
 <!DOCTYPE html>

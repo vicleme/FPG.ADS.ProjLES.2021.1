@@ -15,5 +15,9 @@ $campo=mysqli_fetch_array($seleciona);
 $campo['tempoplat']=date('d/m/Y', strtotime($campo['tempoplat']));
 if($campo['genero']=='2'){
     $campo['generoe']='Masculino';
+} else if($campo['genero']=='1'){
+    $campo['generoe']='Feminino';
+} else if($campo['genero']=='3'){
+    $campo['generoe']='Outro';
 }
 ?>

@@ -4,7 +4,7 @@
     if ( (!empty($_SESSION['motorista'])) || (!empty($_SESSION['passageiro'])) ){
         if (!empty($_SESSION['motorista'])) {
             $login = $_SESSION['motorista'];
-            header("Location: perfilpassageiro.php"); 
+            header("Location: perfilmotorista.php"); 
         } else {
             $login = $_SESSION['passageiro'];
         }

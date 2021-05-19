@@ -464,7 +464,7 @@ if ($_GET['msg']=='1'){
             tablinks[0].className = tablinks[0].className.replace("w3-light-blue", "");
             tablinks[1].className = tablinks[1].className.replace("w3-button tablink", "w3-button tablink w3-light-blue");
             document.getElementById('Cadastrar').style.display = "block";
-            history.pushState({}, '', 'acesso.html');
+            history.pushState({}, '', 'acesso.php');
         }
     </script>
 

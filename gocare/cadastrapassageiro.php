@@ -13,7 +13,7 @@ if(!empty($_POST))
 	
 	$senha = md5($senha);
 
-	$sql = "INSERT INTO passageiro(nome, sobrenome, genero, datanasc, email, senha, telcel ) 
+	$sql = "INSERT INTO passageiro(nome, sobrenome, genero, datanasc, email, senha, telcel) 
 	VALUES ('${nome}', '${sobrenome}', '${genero}', '${datanasc}', '${email}', '${senha}', '${telcel}')";
 
 	$query = $db->query($sql);
