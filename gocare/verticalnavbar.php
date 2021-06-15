@@ -35,8 +35,9 @@
                     <i class='fas fa-key' style='margin-right:15px;'></i>Alterar senha
                 </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" id="abanotificacoes">
                 <a href="#" class="nav-link" style="color: white;">
+                <!--<a href="notificacoes<?php echo $usertype;?>.php"  class="nav-link" style="color: white;">-->
                     <i class='fas fa-bell' style='margin-right:15px'></i>Notificações
                 </a>
             </li>
@@ -51,13 +52,13 @@
         <!-- Rede -->
         <p class="font-weight-bold text-uppercase px-3 small pb-4 mb-0" style="color: rgb(175, 245, 245);">Rede</p>
         <ul class="nav flex-column mb-0" style="color: white">
-            <li class="nav-item">
-                <a href="#" class="nav-link" style="color: white;">
+            <li class="nav-item" id="abacorridas">
+                <a href="corridas<?php echo $usertype;?>.php" class="nav-link" style="color: white;">
                     <i class='fas fa-car' style='margin-right:15px'></i>Corridas
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link" style="color: white;">
+                <a href="" class="nav-link" style="color: white;">
                     <i class='fas fa-user-circle' style='margin-right:15px'></i>Contatos
                 </a>
             </li>

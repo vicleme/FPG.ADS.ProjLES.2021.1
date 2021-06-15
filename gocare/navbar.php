@@ -17,16 +17,16 @@
             <!-- Informação -->
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="">Sobre</a>
+                    <a class="nav-link" href="sobre.php">Sobre</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">Motoristas</a>
+                    <a class="nav-link" href="sobremotoristas.php">Motoristas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">Passageiros</a>
+                    <a class="nav-link" href="sobrepassageiros.php">Passageiros</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">Peça sua viagem</a>
+                    <a class="nav-link" href="viagempedir.php">Peça sua viagem</a>
                 </li>
             </ul>
 
@@ -100,7 +100,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="">Dúvidas</a>
-                        <a class="dropdown-item" href="">Contato</a>
+                        <a class="dropdown-item" href="contatocare.php">Contato</a>
                     </div>
                 </li>
             </ul>

@@ -26,17 +26,17 @@
 
             <!-- Informação  -->
             <div style="color:white;" class="column">
-                <a href="index.html">Início</a><br>
-                <a href="">Sobre </a><br>
-                <a href="">Motoristas </a> <br>
-                <a href="">Passageiros </a> <br>
-                <a href="">Peça sua viagem</a> <br>
+                <a href="index.php">Início</a><br>
+                <a href="sobre.php">Sobre </a><br>
+                <a href="sobremotoristas.php">Motoristas </a> <br>
+                <a href="sobrepassageiros.php">Passageiros </a> <br>
+                <a href="viagempedir.php">Peça sua viagem</a> <br>
             </div>
 
             <!-- Ajuda -->
             <div style="color:white" class="column">
                 <a href="">Dúvidas </a><br>
-                <a href="">Contato </a><br>
+                <a href="contatocare.php">Contato </a><br>
             </div>
 
             <!-- Acesso -->

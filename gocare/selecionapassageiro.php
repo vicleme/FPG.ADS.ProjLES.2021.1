@@ -1,6 +1,5 @@
 <?php
 include("conecta.php");
-session_start(); 
 
     if ( (!empty($_SESSION['motorista'])) || (!empty($_SESSION['passageiro'])) ){
         if (!empty($_SESSION['motorista'])) {

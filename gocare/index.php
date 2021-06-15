@@ -53,9 +53,11 @@
                 <br><br>• Atendimento humanizado
             </p>
         </div>
+        <form action="sobre.php" class="form-inline my-2 my-lg-0">
         <div id="topics" style="color:white;text-align:center;position: absolute; left:22.5vw;top: 38.8vw;">
             <button style="font-size: 1.2vw;" class="btn btn-info btn-block downloadapp">Saiba mais</button>
         </div>
+        </form>
     </section>
 
     <section id="presentation2">
@@ -117,7 +119,7 @@
                             <h5 class="card-title" style="text-align:center">Lar das Moças Cegas</h5>
                             <p class="card-text">
                                 <p style="text-align:center">
-                                    <a class="btn btn-info" style="color: white;">Conheça</a>
+                                    <a href="http://www.lmc.org.br/" class="btn btn-info" style="color: white;">Conheça</a>
                                 </p>
                             </p>
                         </div>
@@ -126,10 +128,10 @@
                     <div class="card">
                         <img class="card-img-top" src="img/parceiro2.png" alt="Monalisa">
                         <div class="card-body">
-                            <h5 class="card-title" style="text-align:center">SPMDFESP</h5>
+                            <h5 class="card-title" style="text-align:center">APMDFESP</h5>
                             <p class="card-text">
                                 <p style="text-align:center">
-                                    <a class="btn btn-info" style="color: white;">Conheça</a>
+                                    <a href="http://apmdfesp.com.br/portal/" class="btn btn-info" style="color: white;">Conheça</a>
                                 </p>
                             </p>
                         </div>
@@ -141,7 +143,7 @@
                             <h5 class="card-title" style="text-align:center">ACAT</h5>
                             <p class="card-text">
                                 <p style="text-align:center">
-                                    <a class="btn btn-info" style="color: white;">Conheça</a>
+                                    <a href="http://acat.com.br/" class="btn btn-info" style="color: white;">Conheça</a>
                                 </p>
                             </p>
                         </div>
