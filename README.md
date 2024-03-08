@@ -1,7 +1,5 @@
 # FPG.ADS.ProjLES.2021.1
-🇧🇷 pt-br: Modelo de aplicação web de captação de serviços de transporte especializado para pessoas com necessidades específicas, como pessoas com deficiência. Projeto de Laboratório de Engenharia de Software, disciplina do curso de ADS da Fatec PG.
-
-🇺🇸 en-us: Web application focused on a specialized transport services platform for people with specific needs, such as people with disabilities. Software Engineering Laboratory Project, subject of the Systems Analysis and Development course at the Technology College (Fatec) in Praia Grande.
+Modelo de aplicação web de captação de serviços de transporte especializado para pessoas com necessidades específicas, como pessoas com deficiência. Projeto de Laboratório de Engenharia de Software, disciplina do curso de ADS da Fatec PG. 
 
 ![GoCareGit2](https://github.com/vicleme/FPG.ADS.ProjLES.2021.1/assets/51094363/3ba7061f-4581-444c-abee-fc2ed323d508)
 ![GoCareGit3](https://github.com/vicleme/FPG.ADS.ProjLES.2021.1/assets/51094363/087718c2-1f11-467f-bcd8-3e1d29444553)
